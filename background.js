@@ -10,9 +10,7 @@ const main_container=document.querySelector(".main_container");
 
 const loader=document.querySelector(".loader");
 
-//preload function to load all the images 
-// all the preloaded images are stored in browser CACHE so that we can avoid white screen loading time
-// when using new Image() and setting its src, browsers automatically cache the images.
+
 async function preloadImages(){
     //using in-memory cache so that it stops random flickering and faster retrivel than browser cache 
     const imageCache=new Map();
@@ -31,8 +29,7 @@ async function preloadImages(){
         });
 
     });
-    return Promise.all(promises).then(()=>imageCache);//asynchronous handles all promises 
-//and returns imageCache
+    return Promise.all(promises).then(()=>imageCache);
 
 };
 
@@ -67,16 +64,7 @@ window.onload=()=>{
     });
     
 
-    // if(!hasPreloadBefore){
-    //     preloadImages();
-    //     hasPreloadBefore=true;  //marking that preloadImages has been executed once
-
-    // }This is not required as a refresh would wipe out in-memory of images 
-    //you can only store string in session storage so storing loaded images is also not possible
-   
     
-    // When setting backgroundImage with a URL, the browser will:
-
     // First check if there's a loaded image in memory (our Map cache) with that src
     // If not found in memory, check browser's disk cache
     // If not in disk cache, fetch from network
