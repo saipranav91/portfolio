@@ -1,0 +1,296 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-attachment: fixed; /* Prevents scrolling background flicker */
+    transition: background-image 1s ease-in-out;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: background-image;
+    background-color: #222222;
+    -webkit-background-size: cover;
+   
+    
+}
+
+h1,h2,h3,h4,h5,h6,.logo{
+    font-family: 'Montserrat', sans-serif;
+    color:#fff;
+}
+
+p{
+   
+    color:#FFD700;
+    font-size: larger;
+}
+
+.main-container{
+    
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+} 
+
+
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    overflow: hidden;
+  
+
+}
+.wrapper-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    
+ 
+
+    
+}
+.navbar-toggler{
+    display: flex;
+    align-items: center;
+    border: none;
+}
+#navbar-toggle-icon{
+    color: #fff;
+    cursor: pointer;
+    border-color: #fff;
+    margin-right: 50px;
+   
+}
+
+a{
+    
+   
+    text-decoration: none;
+    color:#fff;
+    padding: 14px 16px;
+    text-shadow: 2px 2px 0px #ff0000, 4px 4px 0px #00ff00, 6px 6px 0px #0000ff;
+ 
+
+
+
+
+
+
+}
+
+.navbarheader{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.logo{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 2px 2px 0px #ccc, 4px 4px 0px #999;
+
+
+
+
+
+}
+.nav-hidden{
+    display: none;
+
+    margin-right: 150px;
+    
+   
+    
+}
+.nav-items{
+    display: block;
+}
+.nav-items:hover{
+    text-decoration:underline;
+    text-decoration-color: #fff;
+
+}
+.main-heading{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+
+svg{
+    width: 25px;
+    height: 25px;
+}
+.leetcode{
+    width: 30px;
+    height: 30px;
+}
+
+.geektrust{
+    width: 30px;
+    height: 30px;
+}
+.website-links{
+    margin-bottom: 20px;
+}
+
+.resume-btn{
+    background-color: black;
+    border-radius: 8px;
+    border: none;
+  
+    
+}
+
+
+.resume{
+    display: block;
+}
+.resume:hover{
+    cursor: pointer;
+    color: black;
+}
+.resume-btn:hover{
+    background-color: #fff;
+    
+
+
+}
+.resume:hover{
+    text-shadow: 3px 3px 6px rgba(0, 0, 139, 0.6);
+
+}
+
+/* Simple loader style */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Make sure it's on top of other content */
+}
+
+.spinner {
+    border: 4px solid #f3f3f3; /* Light gray border */
+    border-top: 4px solid #3498db; /* Blue border */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* Animation for spinning effect */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.about-container{
+    display: flex;
+    flex-direction: column;/*In flex column direction align items controls the horizontal alignment thats why align-items:flex-start works*/
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left; /* Align text properly */
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;/*to center the container itself */
+}
+
+.about-para {
+    text-align: justify; /* Justify text for equal alignment */
+    width: 100%;
+    max-width: 600px;
+ 
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.experience-container{
+    display: flex;
+    flex-direction: column;/*In flex column direction align items controls the horizontal alignment thats why align-items:flex-start works*/
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left; /* Align text properly */
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;/*to center the container itself */
+   margin-top: 50px;
+   
+}
+.experience-para{
+    text-align: justify; /* Justify text for equal alignment */
+    width: 100%;
+    max-width: 600px;
+ 
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+}
+
+@media screen and (min-width: 830px) {
+
+    .nav-hidden{
+        display: flex;
+        flex-direction: row;
+      
+    }
+    .navbarheader{
+        margin-left: 100px;
+    }
+    .navbar-toggler{
+        display: none;
+    }
+    .wrapper-div{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .main-heading{
+        margin-top: 200px;
+    }
+    #navbar-toggle-icon{
+        margin-right: 150px;
+    }
+    a{
+        padding: 14px,14px;
+    }
+    
+}
+
+.active{
+    display: flex;
+    flex-direction: column;
+}
+
+
